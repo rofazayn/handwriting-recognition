@@ -1,4 +1,5 @@
 import {
+  Anchor,
   Box,
   Button,
   Container,
@@ -6,8 +7,10 @@ import {
   Grid,
   Group,
   Text,
+  ThemeIcon,
   useMantineTheme,
 } from '@mantine/core';
+import { IconBrandGithub } from '@tabler/icons';
 import * as tf from '@tensorflow/tfjs';
 import { useRef, useState } from 'react';
 import { MnistData } from './classes/mnist-data';
@@ -272,6 +275,41 @@ function App() {
               </Grid>
             </Box>
           </>
+
+          <Divider my={16} variant='dashed' />
+          <Box>
+            <Text size='sm' weight='500' mb={-4}>
+              Crafted by Abderraouf Zine
+            </Text>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}
+            >
+              <Text size='xs' color='dimmed'>
+                MIT Licensed (Open Source)
+              </Text>
+              <Group spacing={4}>
+                <Text size='xs' color='dimmed'>
+                  See full code on
+                </Text>
+                <Anchor
+                  href='https://github.com/rofazayn/handwriting-recognition'
+                  target='_blank'
+                  sx={{ color: theme.colors.gray[4] }}
+                >
+                  <Group spacing={3}>
+                    <Text size='xs' underline>
+                      GitHub
+                    </Text>
+                    <IconBrandGithub width='16' />
+                  </Group>
+                </Anchor>
+              </Group>
+            </Box>
+          </Box>
 
           <Divider my={16} variant='dashed' />
           <Group>
